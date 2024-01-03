@@ -6,13 +6,32 @@
     font-family: Mulish, sans-serif;
 }
 
+/*Variable defining bg colors acording to answers*/
+
+:root {
+    --hue-neutral: 200;
+    --hue-incorrect: 0;
+    --hue-correct: 145;
+}
 
 body{
     padding:0;
     margin:0;
     width: 100vw;
     height: 100vh;
-    background-color: #188b6f;
+    /*variable to have diferent bg depending on answers*/
+    --hue: var(--hue-neutral);
+    background-color: hsl(var(--hue), 100%, 30%);
+}
+
+/*bg color when its correct*/
+body.correct {
+    --hue: var(--hue-correct);
+}
+
+/*bg color when its incorrect*/
+body.incorrect {
+    --hue: var(--hue-incorrect);
 }
 
 main{
@@ -21,3 +40,12 @@ main{
     align-items: center;
 }
 
+/*Main container */
+.container {
+    width: 600px;
+    max-width: 60%;
+    background-color: #80ccbb;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 20px 1px;
+}
