@@ -34,6 +34,10 @@ body.incorrect {
     --hue: var(--hue-incorrect);
 }
 
+header{
+    text-align: center;
+    color:#ffffff;
+}
 main{
     display:flex;
     justify-content: center;
@@ -48,4 +52,26 @@ main{
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 20px 1px;
+}
+
+.btn-options {
+    display:grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 10px 0;
+
+}
+
+.btn{
+    border: 1px solid hsl(var(--hue), 100%, 20%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.btn:hover{
+    border-color:black;
+    background-color: hsl(var(--hue), 100%, 20%);
+    color: white;
+
 }
