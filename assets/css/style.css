@@ -73,5 +73,30 @@ main{
     border-color:black;
     background-color: hsl(var(--hue), 100%, 20%);
     color: white;
+}
 
+.btn.correct{
+    --hue: var(--hue-correct);
+    color: black;
+}
+
+.btn.incorrect {
+    --hue: var(--hue-icorrect);
+    
+}
+
+.start-btn, .next-btn {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+}
+
+.main-btns{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+}
+
+.hide {
+    display: none;
 }
