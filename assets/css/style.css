@@ -6,20 +6,18 @@
     font-family: Mulish, sans-serif;
 }
 
-/* variable for background color for when the answers are selected*/
-:root {
-    --bgcolor-body:#7eb9b6;
-    --bgcolor-wrong: #ae2029;
-    --bgcolor-right: #7dcf72;
-}
 
 body{
     padding:0;
     margin:0;
-    display:flex;
     width: 100vw;
     height: 100vh;
+    background-color: #188b6f;
+}
+
+main{
+    display:flex;
     justify-content: center;
     align-items: center;
-    --bgcolor: var(--bgcolor-body);
 }
+
