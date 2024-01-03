@@ -1,0 +1,25 @@
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: Mulish, sans-serif;
+}
+
+/* variable for background color for when the answers are selected*/
+:root {
+    --bgcolor-body:#7eb9b6;
+    --bgcolor-wrong: #ae2029;
+    --bgcolor-right: #7dcf72;
+}
+
+body{
+    padding:0;
+    margin:0;
+    display:flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    --bgcolor: var(--bgcolor-body);
+}
