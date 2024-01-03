@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!--Css-->
     <link href="assets/css/style.css" rel="stylesheet">
     <title>Earth Quiz</title>
 </head>
 <body>
     <header>
+    <!--Tittle-->
     <h1 id="title">THE EARTH QUIZ</h1>
     <p>How much do you know the world you live in?</p>
+    <!--Hero image-->
     <img src="assets/images/image/hero-earth.jpg" alt="hero">
     </header>
+    <!--main container in where the quiz will be set-->
     <main>
     <div class="container">
         <div id="question-cont" class="hide">
@@ -24,6 +33,7 @@
                 <button class="btn">4</button>
             </div>
         </div>
+        <!--Main buttons for starting and progressin the quiz-->
         <div class="main-btns">
             <button id="start" class="start-btn btn">Start</button>
             <button id="next" class="next-btn btn hide">Next</button>
@@ -31,11 +41,13 @@
     </div>
     </main>
     <footer>
+        <!--Score area-->
         <div class="score-area">
             <p class="scores">Correct Answers <span id="score">0</span></p>
             <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
         </div>
     </footer>
+    <!--JavaScript Page-->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
