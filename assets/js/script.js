@@ -8,8 +8,52 @@ const questions = [
             { text: '1.71 billion years old', correct: false },
             { text: '3.96 billion years old', correct: false }
         ]
-    }
-];
+    },
+{
+    question: 'Which year the Earth Day was insituted?',
+    answers: [
+        { text: '1987', correct: false },
+        { text: '1997', correct: false },
+        { text: '1970', correct: true },
+        { text: '1940', correct: false }
+    ]
+},
+{
+    question: 'Which is the largest continet?',
+    answers: [
+        { text: 'Asia', correct: true },
+        { text: 'Africa', correct: false },
+        { text: 'Europe', correct: false },
+        { text: 'North-America', correct: false }
+    ]
+},
+{
+    question: 'Largest hot desert of the Earth?',
+    answers: [
+        { text: 'Patagonia', correct: false },
+        { text: 'Sahara', correct: true },
+        { text: 'Gobi', correct: false },
+        { text: 'kalahari', correct: false }
+    ]
+},
+{
+    question: 'Biggest rainforest on Earth?',
+    answers: [
+        { text: 'Congo Rainforest', correct: false },
+        { text: 'Australiasian Realm', correct: false },
+        { text: 'Sundaland', correct: false },
+        { text: 'Amazon Rainforest', correct: true }
+    ]
+},
+{
+    question: 'Which one is the biggest animal?',
+    answers: [
+        { text: 'Antarctic blue whales ', correct: true },
+        { text: 'African Elephant', correct: false },
+        { text: 'Colossal Squid', correct: false },
+        { text: 'Whale Shark', correct: false }
+    ]
+}];
 
 // Shuffle question so everytime the quiz have diferent order
 let shuffleQuestions, currentQuestionIndex 
@@ -27,7 +71,7 @@ const answerButtonsElements = document.getElementById('answer-btns');
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () =>{
     currentQuestionIndex++;
-    setNextQuestion()
+    nextQuestion();
 })
 
 
@@ -114,9 +158,4 @@ function clearStatusClass(element) {
     element.classList.remove('incorrect');
 }
 
-function showResult(){
-    const result = document.getElementsByClassName('score');
-    result(){
-
-    }
 }
