@@ -92,6 +92,10 @@ console.log('start game');
  currentQuestionIndex = 0;
  questionContainer.classList.remove('hide');
  nextQuestion();
+
+ //reset score()
+ resetScore();
+
 }
 
 function nextQuestion() {
@@ -99,7 +103,12 @@ function nextQuestion() {
     showQuestion(shuffleQuestions[currentQuestionIndex]);
 
 }
-
+//Reset game function
+function restarGame(){
+    startButton.innerHTML ='Start';
+    startButton.classList.remove('hide');
+    resetScore();
+}
 //Function to reset everything in the container back to default everytime there is a new question
 function resetState(){
     nextButton.classList.add('hide');
@@ -174,4 +183,12 @@ function clearStatusClass(element) {
     element.classList.remove('incorrect');
 }
 
+}
+
+function resetScore(){
+    correctAnswers=0;
+    incorrectAnswers=0;
+    correctElement.textContent= correctAnswers;
+    incorrectElement.textContent = incorrectAnswers;
+    document.body.classList.remove('correct', 'incorrect');
 }
