@@ -64,6 +64,8 @@ const nextButton = document.getElementById('next');
 const questionContainer = document.getElementById('question-cont');
 let correctAnswers = 0;
 let incorrectAnswers= 0;
+const correctElement = document.getElementById('score');
+const incorrectElement = document.getElementById ('incorrect');
 
 const questionElement = document.getElementById('question');
 const answerButtonsElements = document.getElementById('answer-btns');
@@ -129,6 +131,20 @@ function selectAnswer(e){
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
     setStatusClass(document.body, correct)
+// increment score depending on answer
+    if(correct) {
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+    }
+
+    //update the score
+    correctElement.textContent = correctAnswers;
+    incorrectElement.textContent = incorrectAnswers;
+
+
+    setStatusClass(document.body, correct);
+
     //check on everybutton to get the correct
     Array.from(answerButtonsElements.children).forEach(button =>{
         setStatusClass(button, button.dataset.correct)
