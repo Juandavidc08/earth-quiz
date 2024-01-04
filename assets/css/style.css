@@ -89,7 +89,7 @@ main{
 }
 
 .btn.incorrect {
-    --hue: var(--hue-icorrect);
+    --hue: var(--hue-incorrect);
     
 }
 
