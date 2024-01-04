@@ -14,15 +14,21 @@ const questions = [
 // Shuffle question so everytime the quiz have diferent order
 let shuffleQuestions, currentQuestionIndex 
 
-//Start and Next buttons
+//Main variables 
 const startButton = document.getElementById('start');
 const nextButton = document.getElementById('next');
 const questionContainer = document.getElementById('question-cont');
+let correctAnswers = 0;
+let incorrectAnswers= 0;
 
 const questionElement = document.getElementById('question');
 const answerButtonsElements = document.getElementById('answer-btns');
 
 startButton.addEventListener('click', startGame);
+nextButton.addEventListener('click', () =>{
+    currentQuestionIndex++;
+    setNextQuestion()
+})
 
 
 // function basics structure of the quiz
@@ -83,8 +89,14 @@ function selectAnswer(e){
     Array.from(answerButtonsElements.children).forEach(button =>{
         setStatusClass(button, button.dataset.correct)
     })
+    //Check if there are anymore questions
+    if(shuffleQuestions.length > currentQuestionIndex + 1){
     //show again next button to continue the quiz
     nextButton.classList.remove('hide');
+    } else {
+        //restart button if the quiz is finish
+        startButton.innerHTML = 'Restart';
+        startButton.classList.remove('hide');
     }
 
 //Set status if he answer is correct or not 
@@ -102,3 +114,9 @@ function clearStatusClass(element) {
     element.classList.remove('incorrect');
 }
 
+function showResult(){
+    const result = document.getElementsByClassName('score');
+    result(){
+
+    }
+}
