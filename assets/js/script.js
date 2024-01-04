@@ -19,7 +19,7 @@ const questions = [
     ]
 },
 {
-    question: 'Which is the largest continet?',
+    question: 'Which is the largest continent?',
     answers: [
         { text: 'Asia', correct: true },
         { text: 'Africa', correct: false },
