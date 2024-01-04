@@ -1,10 +1,22 @@
-
+// questions of the quiz
+const questions = [
+    {
+        question: 'How old is the Earth?',
+        answers: [
+            { text: '4.54 billion years old', correct: true },
+            { text: '10 billion years old', correct: false },
+            { text: '1.71 billion years old', correct: false },
+            { text: '3.96 billion years old', correct: false }
+        ]
+    }
+];
 
 // Shuffle question so everytime the quiz have diferent order
 let shuffleQuestions, currentQuestionIndex 
 
 //Start and Next buttons
 const startButton = document.getElementById('start');
+const nextButton = document.getElementById('next');
 const questionContainer = document.getElementById('question-cont');
 
 const questionElement = document.getElementById('question');
@@ -31,10 +43,20 @@ console.log('start game');
 }
 
 function nextQuestion() {
+    resetState();
     showQuestion(shuffleQuestions[currentQuestionIndex]);
 
 }
 
+//Function to reset everything in the container back to default everytime there is a new question
+function resetState(){
+    nextButton.classList.add('hide');
+    //loop all children of answer buttons
+    while (answerButtonsElements.firstChild){
+        answerButtonsElements.removeChild(answerButtonsElements.firstChild);
+    }
+
+}
 //Show question
 function showQuestion(question){
     questionElement.innerText = question.question;
@@ -56,15 +78,3 @@ function selectAnswer(){
 
 }
 
-// questions of the quiz
-const questions = [
-    {
-        question: 'How old is the Earth?',
-        answers: [
-            { text: '4.54 billion years old', correct: true },
-            { text: '10 billion years old', correct: false },
-            { text: '1.71 billion years old', correct: false },
-            { text: '3.96 billion years old', correct: false }
-        ]
-    }
-];
