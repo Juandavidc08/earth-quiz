@@ -37,7 +37,19 @@ function nextQuestion() {
 
 //Show question
 function showQuestion(question){
-    questionElement.innerText = question.question
+    questionElement.innerText = question.question;
+    //see answers and determine qhich one is correct
+    question.answer.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        //show the answers in the container
+        button.addEventListener('click',selectAnswer);
+        answerButtonsElements.appendChild(button);
+    })
 }
 
 function selectAnswer(){
